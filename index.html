@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hariom Dental and Aesthetic Clinic</title>
+  <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    toggleBtn.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  });
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">Hariom Dental</div>
+
+    <!-- Hamburger Icon -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="nav">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Doctor</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  <!-- Home -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Hariom Dental & Aesthetic Clinic</h1>
+      <p>Crafting confident smiles and glowing skin</p>
+    </div>
+  </section>
+
+ <!-- About -->
+<section id="about" class="section">
+  <div class="about-container">
+    <div class="about-content">
+      <h2><i class="fa-solid fa-hospital-user"></i> About Us</h2>
+      <p>
+        At Hariom Dental & Aesthetic Clinic, we combine cutting-edge dental treatments with aesthetic care to deliver comprehensive results for every patient. Our mission is to provide high-quality dental services with a focus on patient satisfaction, comfort, and care.
+      </p>
+      <p>
+        Our clinic, led by Dr. Priya Patel, focuses on personalized treatments to give you the most beautiful smile and glowing skin. From dental implants to facial aesthetics, we offer a range of services in a comfortable and welcoming environment.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="{% static 'images/photo1.jpg' %}" alt="Clinic Image">
+    </div>
+  </div>
+</section>
+
+
+<!-- Services -->
+<section id="services" class="section alt-bg">
+  <h2><i class="fa-solid fa-hand-holding-medical"></i> Our Services</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <i class="fa-solid fa-tooth service-icon"></i>
+      <h3>Dental Implants</h3>
+      <p>Permanent tooth replacement solutions with the most natural look and feel.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-face-smile service-icon"></i>
+      <h3>Smile Designing</h3>
+      <p>Customized smile makeovers to enhance your facial aesthetics and boost confidence.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-spa service-icon"></i>
+      <h3>Facial Aesthetics</h3>
+      <p>Non-surgical treatments for youthful and radiant skin without the need for downtime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section id="team" class="section">
+  <h2><i class="fa-solid fa-user-doctor"></i> Meet Dr. Priya Patel</h2>
+  <div class="team-container">
+    <div class="team-card">
+      <img src="{% static 'images/dr-priya-patel.jpg' %}" alt="Dr. Priya Patel" class="team-photo" />
+      <h3>Dr. Priya Patel</h3>
+      <p>BDS, MDS – Prosthodontics & Implantologist</p>
+      <p>PGDCC – Mumbai | Skincare Enthusiast</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Appointment -->
+<section id="appointment" class="section appointment">
+  <div class="appointment-container">
+    <h2><i class="fa-solid fa-calendar-check"></i> Book an Appointment</h2>
+    <form class="appointment-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name"><i class="fa-solid fa-user"></i> Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required />
+      </div>
+      <div class="form-group">
+        <label for="phone"><i class="fa-solid fa-phone"></i> Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+      </div>
+      <div class="form-group">
+        <label for="service"><i class="fa-solid fa-tooth"></i> Service</label>
+        <select id="service" name="service" required>
+          <option value="">-- Select --</option>
+          <option>Dental Implants</option>
+          <option>Smile Designing</option>
+          <option>Facial Aesthetics</option>
+          <option>Routine Checkup</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date"><i class="fa-solid fa-calendar-days"></i> Preferred Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+      <div class="form-group">
+        <label for="message"><i class="fa-solid fa-message"></i> Message (Optional)</label>
+        <textarea id="message" name="message" rows="3" placeholder="Leave a message..."></textarea>
+      </div>
+      <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="section alt-bg">
+  <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <p><i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/tdD1gHfau3PzWRHSA" target="_blank">View on Google Maps</a></p>
+    <p><i class="fa-solid fa-phone"></i> <a href="tel:+917041432226">+91 7041432226</a></p>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:priyapatel0603@gmail.com">priyapatel0603@gmail.com</a></p>
+  </div>
+
+  <!-- Instagram -->
+  <div class="social-media">
+    <h3>Follow Us On Instagram</h3>
+    <a href="https://www.instagram.com/hariomdentalandaestheticclinic?igsh=MWcxcWFoZW81OXFvbQ==/" target="_blank" class="instagram-link">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+  </div>
+  
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hariom Dental & Aesthetic Clinic. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
